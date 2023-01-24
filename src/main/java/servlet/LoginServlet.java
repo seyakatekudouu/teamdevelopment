@@ -65,7 +65,7 @@ public class LoginServlet extends HttpServlet {
 				if(account.getId()==1) {
 					HttpSession session = request.getSession();
 					session.setAttribute("root", account);
-					String view = "WEB-INF/view/root-menu.jsp";
+					String view = "WEB-INF/view/Rootbook.jsp";
 					RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 					dispatcher.forward(request, response);
 				}else {
