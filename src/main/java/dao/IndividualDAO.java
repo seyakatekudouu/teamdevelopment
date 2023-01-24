@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import dto.Individual;
+import dto.bookDTO;
 import util.GenerateHashedPw;
 import util.GenerateSalt;
 
@@ -116,7 +117,33 @@ public class IndividualDAO {
 		}
 		return null;
 	}
-	
+public static int regibook(bookDTO book) {
+		
+		
+		String sql = "INSERT INTO  book2 VALUES(?, ?, ?, ?)";
+
+		// return用の変数
+		int result = 0;
+		
+		try (
+				Connection con = getConnection();	// DB接続
+				PreparedStatement pstmt = con.prepareStatement(sql);			// 構文解析
+				){
+			pstmt.setString(1, book.getName());
+			pstmt.setString(2, book.getTyosya());
+			pstmt.setString(3, book.getSyuppan());
+			pstmt.setInt(4, book.getIsbn());
+
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
+			e.printStackTrace();
+		} finally {
+			System.out.println(result + "件登録しました。");
+		}
+		return result;
+	}
 
 	
 	
