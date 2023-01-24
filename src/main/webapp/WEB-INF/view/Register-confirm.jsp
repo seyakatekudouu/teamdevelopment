@@ -16,6 +16,6 @@
 	メール：<%=account.getMail() %><br>
 	パスワード：********<br>
 	<a href="RegisterExecuteServlet">OK</a><br>
-	<a href="RegisterFoomServlet">戻る</a>
+	<a href="RegisterFormServlet">戻る</a>
 </body>
 </html>
