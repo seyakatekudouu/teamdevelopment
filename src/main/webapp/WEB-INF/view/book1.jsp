@@ -20,6 +20,6 @@ int Isbn= Integer.parseInt(request.getParameter("Isbn"));
 <p>出版社： <%= syuppan %><br>
 <p>ISBN: <%= Isbn %><br>
 <a href="Rootbook">ホーム画面へ</a><br>
-<a href="Registertouroku">もう一度登録</a><br>
+<a href="Regitertouroku">もう一度登録</a><br>
 </body>
 </html>
