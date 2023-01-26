@@ -9,6 +9,6 @@
 <body>
 <h1>登録の失敗</h1>
 <a href="Rootbook">ホーム画面へ</a><br>
-<a href="Regitertouroku">もう一度登録</a><br>
+<form><INPUT type="button" value="戻る" onClick="history.go(-2)"></FORM>
 </body>
 </html>

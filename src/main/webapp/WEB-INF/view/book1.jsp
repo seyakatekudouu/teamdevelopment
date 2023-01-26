@@ -19,7 +19,7 @@ int Isbn= Integer.parseInt(request.getParameter("Isbn"));
 <p>著者名： <%= tyosya %><br> 
 <p>出版社： <%= syuppan %><br>
 <p>ISBN: <%= Isbn %><br>
-<a href="Rootbook">ホーム画面へ</a><br>
+<form><INPUT type="button" value="戻る" onClick="history.go(-2)"></FORM>
 <a href="Regitertouroku">もう一度登録</a><br>
 </body>
 </html>
